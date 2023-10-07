@@ -1,7 +1,7 @@
 /**
  * Lanza varias instancias de la aplicación ´Cadenas´.
  * El usuario tiene que indicar el número de instancias (menos de 10) y el número de cadenas a generar en todas ellas.
- *
+ * @author AUTOR
  * @version 1.0
  */
 public class Generador {
@@ -60,7 +60,7 @@ public class Generador {
           "Cadenas.jar",
           args[1]
         };
-        //nuevoProceso = 
+        //nuevoProceso =
         Runtime.getRuntime().exec(comando);
       }
     } catch (SecurityException ex) {

@@ -22,9 +22,7 @@ public class SocketEscritor {
       System.err.println("No se ha podido abrir el puerto de escucha.");
       System.err.println(ex.toString());
     }
-    if (
-      conexion != null
-    ) try { //Si hemos podido abrir el puerto
+    if (conexion != null) try { //Si hemos podido abrir el puerto
       System.out.println(
         "Proceso escritor, esperando " + "la conexión del proceso lector...."
       );
@@ -55,20 +53,14 @@ public class SocketEscritor {
     } finally {
       //Nos aseguramos de que se cierren los recursos
       //que estamos utilizando
-      if (
-        streamSalida != null
-      ) streamSalida.close(); //PrintWriter //su cierre no genera excepciones
-      if (
-        canal != null
-      ) try { //Socket
+      if (streamSalida != null) streamSalida.close(); //PrintWriter //su cierre no genera excepciones
+      if (canal != null) try { //Socket
         canal.close();
       } catch (IOException ex) {
         System.err.println("Error al cerrar el socket.");
         System.err.print(ex.toString());
       }
-      if (
-        conexion != null
-      ) try { //ServerSocket
+      if (conexion != null) try { //ServerSocket
         conexion.close();
       } catch (IOException ex) {
         System.err.println("Error al cerrar ServerSocket.");

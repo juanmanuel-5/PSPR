@@ -24,8 +24,7 @@ public class SocketLector {
     }
     if (
       canal != null
-    ) //un canal de comunicación //Si hemos podido establecer la conexión. Tenemos
-    try {
+    ) try { //un canal de comunicación //Si hemos podido establecer la conexión. Tenemos
       entrada =
         new BufferedReader(new InputStreamReader(canal.getInputStream()));
       //Obtemenos el objeto que representa el strean de entrada en el canal
