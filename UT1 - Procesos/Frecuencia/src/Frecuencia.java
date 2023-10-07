@@ -5,7 +5,7 @@ import java.io.InputStreamReader;
 /**
  * Dado un texto recibido a través de la entrada estándar, obtiene la frecuencia absoluta
  * de cada una de las vocales, es decir, la cantidad de veces que aparece cada vocal.
- *
+ * @author AUTOR
  * @version 1.0
  */
 public class Frecuencia {
