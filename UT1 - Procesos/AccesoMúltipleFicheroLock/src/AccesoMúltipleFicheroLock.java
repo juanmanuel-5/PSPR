@@ -1,8 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
@@ -53,42 +48,39 @@ public class AccesoMúltipleFicheroLock {
       if (args.length > 1) nombreFichero = args[1].replace("\\", "\\\\");
       //Hemos recibido la ruta del fichero en la línea de comandos
       else {
-        nombreFichero = "C:\\valor.txt";
+        nombreFichero =
+          "C:\\Users\\Abies pinsapo\\Documents\\PSPR\\UT1 - Procesos\\valor.txt";
         //Fichero que se utilizará por defecto
       }
     } else { //GNU/Linux
       if (args.length > 1) nombreFichero = args[1];
       //Hemos recibido la ruta del fichero en la línea de comandos
       else {
-        nombreFichero = "/home/margye/valor.txt";
+        nombreFichero = "~/valor.txt";
         //Fichero que se utilizará por defecto
       }
     }
     //Preparamos el acceso al fichero
     archivo = new File(nombreFichero);
-    for (
-      int i = 0;
-      i < 100;
-      i++
-    ) try { //aumentamos las situaciones de concurrencia
+    for (int i = 0; i < 100; i++) try { //aumentamos las situaciones de concurrencia
       raf = new RandomAccessFile(archivo, "rwd"); //Abrimos el fichero
       //***************
       //Sección crítica
       bloqueo = raf.getChannel().lock();
       //bloqueamos el canal de acceso al fichero. Obtenemos el objeto que
       //representa el bloqueo para después poder liberarlo
-      System.out.println("Proceso" + orden + ": ENTRA sección");
+      System.out.println("Proceso " + orden + ": ENTRA sección");
       // Lectura del fichero
       valor = raf.readInt(); //leemos el valor
       valor++; //incrementamos
       raf.seek(0); //volvemos a colocarnos al principio del fichero
       raf.writeInt(valor); //escribimos el valor
-      System.out.println("Proceso" + orden + ": SALE sección");
+      System.out.println("Proceso " + orden + ": SALE sección");
       bloqueo.release(); //Liberamos el bloqueo del canal del fichero
       bloqueo = null;
       //Fin sección crítica
       //*******************
-      System.out.println("Proceso" + orden + ": valor escrito " + valor);
+      System.out.println("Proceso " + orden + ": valor escrito " + valor);
     } catch (Exception e) {
       System.err.println("P" + orden + " Error al acceder al fichero");
       System.err.println(e.toString());

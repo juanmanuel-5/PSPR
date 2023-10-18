@@ -1,8 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
@@ -34,14 +29,15 @@ public class CrearMúltiplesAccesosLock {
       if (args.length > 0) nombreFichero = args[0].replace("\\", "\\\\");
       //Hemos recibido la ruta del fichero en la línea de comandos
       else {
-        nombreFichero = "C:\\valor.txt";
+        nombreFichero =
+          "C:\\Users\\Abies pinsapo\\Documents\\PSPR\\UT1 - Procesos\\valor.txt";
         //Fichero que se utilizará por defecto
       }
     } else { //GNU/Linux
       if (args.length > 0) nombreFichero = args[0];
       //Hemos recibido la ruta del fichero en la línea de comandos
       else {
-        nombreFichero = "/home/margye/valor.txt";
+        nombreFichero = "~/valor.txt";
         //Fichero que se utilizará por defecto
       }
     }
@@ -74,7 +70,7 @@ public class CrearMúltiplesAccesosLock {
         System.err.println("Error al crear el fichero");
         System.err.println(e.toString());
       } finally {
-        try { // Nos asegurarnos que se cierra el fichero.
+        try { // Nos aseguramos que se cierra el fichero.
           if (null != raf) raf.close();
         } catch (Exception e2) {
           System.err.println("Error al cerrar el fichero");
@@ -86,7 +82,12 @@ public class CrearMúltiplesAccesosLock {
     //Creamos un grupo de procesos que accederán al mismo fichero
     try {
       for (int i = 0; i <= 25; i++) {
-        String[] comando = {"java -jar", "AccesoMúltipleFicheroLock.jar", String.valueOf(i), args[0]};
+        String[] comando = {
+          "java",
+          "-jar",
+          "AccesoMúltipleFicheroLock.jar",
+          String.valueOf(i),
+        }; //args[0]};
         Runtime.getRuntime().exec(comando);
         //Creamos el nuevo proceso y le indicamos el número de orden y
         //el fichero que debe utilizar.

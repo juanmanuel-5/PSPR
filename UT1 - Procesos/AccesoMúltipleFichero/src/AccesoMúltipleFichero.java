@@ -1,8 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 import java.io.*;
 
 /**
@@ -47,14 +42,14 @@ public class AccesoMúltipleFichero {
       if (args.length > 1) nombreFichero = args[1].replace("\\", "\\\\");
       //Hemos recibido la ruta del fichero en la línea de comandos
       else {
-        nombreFichero = "C:\\valor.txt";
+        nombreFichero = "C:\\Users\\Abies pinsapo\\Documents\\PSPR\\UT1 - Procesos\\valor.txt";
         //Fichero que se utilizará por defecto
       }
     } else { //GNU/Linux
       if (args.length > 1) nombreFichero = args[1];
       //Hemos recibido la ruta del fichero en la línea de comandos
       else {
-        nombreFichero = "/home/margye/valor.txt";
+        nombreFichero = "~/valor.txt";
         //Fichero que se utilizará por defecto
       }
     }
@@ -67,7 +62,7 @@ public class AccesoMúltipleFichero {
         escribir = new FileWriter(nombreFichero);
         pw = new PrintWriter(escribir);
         pw.println(String.valueOf(0)); //Escribimos el valor 0 en el fichero
-        System.out.println("Proceso" + orden + ": Creando el fichero.");
+        System.out.println("Proceso " + orden + ": Creando el fichero.");
       } catch (Exception e) {
         System.err.println("P" + orden + " Error al crear el fichero");
       } finally {
@@ -89,7 +84,7 @@ public class AccesoMúltipleFichero {
       linea = br.readLine();
       valor = Integer.parseInt(linea);
       System.out.println(
-        "Proceso" + orden + ": Valor leído del fichero: " + valor
+        "Proceso " + orden + ": Valor leído del fichero: " + valor
       );
     } catch (Exception e) {
       System.err.println("P" + orden + " Error al leer del fichero");
@@ -115,7 +110,7 @@ public class AccesoMúltipleFichero {
       pw = new PrintWriter(escribir);
       pw.println(String.valueOf(valor));
       System.out.println(
-        "Proceso" + orden + ": Valor escrito en el fichero: " + valor
+        "Proceso " + orden + ": Valor escrito en el fichero: " + valor
       );
     } catch (Exception e) {
       System.err.println("P" + orden + " Error al escribir en el fichero");

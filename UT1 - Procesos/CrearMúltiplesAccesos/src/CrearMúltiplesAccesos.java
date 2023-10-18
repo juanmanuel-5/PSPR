@@ -1,8 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 import java.io.*;
 
 /**
@@ -26,7 +21,7 @@ public class CrearMúltiplesAccesos {
       System.setOut(ps);
       System.setErr(ps);
       for (int i = 0; i <= 20; i++) {
-        String[] comando = {"java -jar", "AccesoMúltipleFichero.jar ", String.valueOf(i), "nuevo.txt"};
+        String[] comando = {"java", "-jar", "AccesoMúltipleFichero.jar", String.valueOf(i), "nuevo.txt"};
         Runtime.getRuntime().exec(comando);
         //Creamos el nuevo proceso y le indicamos el número de orden y
         //el fichero que debe utilizar.
