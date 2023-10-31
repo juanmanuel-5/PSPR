@@ -29,15 +29,15 @@ public class CrearMúltiplesAccesosLock {
       if (args.length > 0) nombreFichero = args[0].replace("\\", "\\\\");
       //Hemos recibido la ruta del fichero en la línea de comandos
       else {
-        nombreFichero =
-          "C:\\Users\\Abies pinsapo\\Documents\\PSPR\\UT1 - Procesos\\valor.txt";
+        nombreFichero = "valor.txt";
+        //"C:\\Users\\Abies pinsapo\\Documents\\PSPR\\UT1 - Procesos\\valor.txt";
         //Fichero que se utilizará por defecto
       }
     } else { //GNU/Linux
       if (args.length > 0) nombreFichero = args[0];
       //Hemos recibido la ruta del fichero en la línea de comandos
       else {
-        nombreFichero = "~/valor.txt";
+        nombreFichero = "./valor.txt";
         //Fichero que se utilizará por defecto
       }
     }

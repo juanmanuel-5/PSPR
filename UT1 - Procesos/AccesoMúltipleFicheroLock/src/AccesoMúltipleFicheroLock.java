@@ -48,8 +48,8 @@ public class AccesoMúltipleFicheroLock {
       if (args.length > 1) nombreFichero = args[1].replace("\\", "\\\\");
       //Hemos recibido la ruta del fichero en la línea de comandos
       else {
-        nombreFichero =
-          "C:\\Users\\Abies pinsapo\\Documents\\PSPR\\UT1 - Procesos\\valor.txt";
+        nombreFichero = "valor.txt";
+        //"C:\\Users\\Abies pinsapo\\Documents\\PSPR\\UT1 - Procesos\\valor.txt";
         //Fichero que se utilizará por defecto
       }
     } else { //GNU/Linux
