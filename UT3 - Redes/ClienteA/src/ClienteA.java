@@ -10,7 +10,7 @@ import javax.swing.JOptionPane;
 /**
  * Formulario que permite realizar peticiones a un servidor para procesar
  * cadenas de texto y obtener el número de ocurrencias de cada vocal.
- * @author José Carlos García Bermúdez
+ * @author 
  */
 public class ClienteA extends javax.swing.JFrame {
 
