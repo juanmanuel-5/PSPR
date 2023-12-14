@@ -43,7 +43,7 @@ public class App {
 
       //Obtener objeto InetAddress  de www.iesalandalus.org
       InetAddress objetoAlandalus_1 =
-              InetAddress.getByName("ftp.iesalandalus.org");
+              InetAddress.getByName("www.iesalandalus.org");
       //Obtener objeto InetAddress  de ftp.iesalandalus.org
       InetAddress objetoAlandalus_2 =
               InetAddress.getByName("ftp.iesalandalus.org");
@@ -56,10 +56,10 @@ public class App {
       System.out.println(objetoAlandalus_2.getHostAddress());
 
       //encapsula google.com
-      InetAddress[] matrizAddress = InetAddress.getAllByName("google.com");
+      InetAddress[] matrizAddress = InetAddress.getAllByName("amazon.com");
 
       //Obtiene y muestras todas las IP asociadas a ese host
-      System.out.println("\nImprime todas las IP disponibles para google.com: ");
+      System.out.println("\nImprime todas las IP disponibles para amazon.com: ");
       for (int i = 0; i < matrizAddress.length; i++) {
         System.out.println(matrizAddress[i].getHostAddress());
       }

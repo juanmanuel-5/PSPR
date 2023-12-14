@@ -13,7 +13,8 @@ public class Ventana extends javax.swing.JFrame {
   public Ventana() {
     //inicia los componentes de diseño
     initComponents();
-    jTextField1.setText("http://www.juntadeandalucia.es/boja/boletines/2012/38/d/updf/d1.pdf");
+    jTextField1.setText("https://www.maeva.es/repositorio/lecturas/inicio-sin-limites.pdf");
+    // http://www.juntadeandalucia.es/boja/boletines/2012/38/d/updf/d1.pdf");
   }
 
   /**
@@ -41,7 +42,8 @@ public class Ventana extends javax.swing.JFrame {
       }
     });
 
-    jTextField1.setText("http://www.juntadeandalucia.es/boja/boletines/2012/38/d/updf/d1.pdf");
+    jTextField1.setText("https://www.maeva.es/repositorio/lecturas/inicio-sin-limites.pdf");
+    // http://www.juntadeandalucia.es/boja/boletines/2012/38/d/updf/d1.pdf");
     jTextField1.setToolTipText("");
     jTextField1.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
